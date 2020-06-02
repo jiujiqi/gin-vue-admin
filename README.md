@@ -94,12 +94,11 @@ npm run serve
 ```bash
 # using go.mod
 
-#install web timeout
-
-go env -w GOPROXY=https://goproxy.cn,https://goproxy.io,direct
-
 # install go modules
 go list (go mod tidy)
+
+# if install timeout,try this before [go list]:
+go env -w GOPROXY=https://goproxy.cn,https://goproxy.io,direct
 
 # build the server
 go build
